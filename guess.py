@@ -4,14 +4,18 @@
 
 import random
 r = random.randint(1, 100)
+count = 0
 
 while True:
 	num = input('1~100 請猜數字: ')
 	num = int(num)
+	count = count + 1
 	if num == r:
 		print('猜對了!')
+		print('總共猜了', count, '次')
 		break
 	elif num > r:
 		print('猜的數字比答案大')
 	else:
 		print('猜的數字比答案小')
+	print('總共猜了', count, '次')
